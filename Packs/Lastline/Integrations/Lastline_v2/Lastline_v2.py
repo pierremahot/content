@@ -237,6 +237,7 @@ def get_report_context(result: Dict, threshold=None) -> Dict:
                     'Vendor': 'Lastline',
                     'Score': score
                 }
+
             elif score > 30:
                 dbotscore['Score'] = 2
             else:

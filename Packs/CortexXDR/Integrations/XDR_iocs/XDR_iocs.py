@@ -140,6 +140,7 @@ def get_iocs_size(query=None) -> int:
 
 def get_iocs(page=0, size=200, query=None) -> List:
     search_indicators = IndicatorsSearcher(page=page)
+
     return search_indicators.search_indicators_by_version(query=query if query else Client.query, size=size)\
         .get('iocs', [])
 
